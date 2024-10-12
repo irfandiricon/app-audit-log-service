@@ -27,6 +27,36 @@ App Audit Log Service adalah layanan untuk mencatat dan mengelola log audit apli
     ```sh
     go run main.go
     ```
+## Struktur project
+
+```
+├───src
+│   ├───common
+│   │   ├───http
+│   │   └───utils
+│   │       ├───httpresponse
+│   │       └───middlewares
+│   ├───domain
+│   │   ├───models
+│   │   └───repositories
+│   ├───infrastructure
+│   │   ├───api
+│   │   ├───cache
+│   │   ├───database
+│   │   │   └───mysql
+│   │   └───rabbitmq
+│   ├───interfaces
+│   │   ├───kafka
+│   │   ├───mq
+│   │   ├───rest
+│   │   │   └───controller
+│   │   └───rpc
+│   ├───payload
+│   │   ├───request
+│   │   └───response
+│   └───usecases
+└───tmp
+```
 
 ## Konfigurasi
 Konfigurasi aplikasi dapat dilakukan melalui file `.env` atau menggunakan variabel lingkungan. Beberapa pengaturan penting meliputi:
